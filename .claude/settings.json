@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "npm run dev",
+      "npm run build",
+      "npm run check",
+      "npm run lint",
+      "npm run test",
+      "npm run preview",
+      "npx svelte-check",
+      "npx eslint src/",
+      "npx prettier --check src/",
+      "npx vitest run"
+    ]
+  }
+}
