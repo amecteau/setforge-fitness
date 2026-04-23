@@ -29,22 +29,24 @@ A professional GitHub Pages promotional website for **SetForge** — a privacy-f
 
 The relationship between these files:
 
-| File | Loaded By | Purpose |
-|---|---|---|
-| `CLAUDE.md` (this file) | Claude Code — automatically, every session | Entry point: orient quickly, point to full rules |
-| `.claude/AGENTS.md` | Claude — read manually per instructions | Full architecture: harness rules, conventions, design system |
+| File                    | Loaded By                                  | Purpose                                                      |
+| ----------------------- | ------------------------------------------ | ------------------------------------------------------------ |
+| `CLAUDE.md` (this file) | Claude Code — automatically, every session | Entry point: orient quickly, point to full rules             |
+| `.claude/AGENTS.md`     | Claude — read manually per instructions    | Full architecture: harness rules, conventions, design system |
 
 ---
 
 ## Quick Reference
 
 ### Key Docs
+
 - `.claude/AGENTS.md` — architecture rules, harness conventions, all slash commands
 - `docs/ui-spec.md` — section-by-section design spec (read before building UI)
 - `docs/project-status.md` — phase tracker; update after completing tasks
 - `docs/content.md` — all marketing copy; single source of truth for text
 
 ### Slash Commands
+
 - `/status` — current phase and task progress
 - `/next` — next task with details and confirmation
 - `/done` — mark task complete, update project-status.md
@@ -53,6 +55,7 @@ The relationship between these files:
 - `/deploy` — GitHub Pages readiness check
 
 ### Never Do
+
 - Import one feature section from another
 - Hardcode copy or URLs in components (use `site.config.ts`)
 - Use `any` types

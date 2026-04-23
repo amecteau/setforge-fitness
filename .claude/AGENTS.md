@@ -31,13 +31,13 @@ When updating `docs/project-status.md`, change the task status emoji (⬜→🔄
 
 ### Skills Available
 
-| Skill | When to Use |
-|---|---|
-| `update-config` | Adding/changing permissions in `.claude/settings.json` or configuring hooks |
-| `simplify` | After implementing a section — review for quality and reuse opportunities |
-| `fewer-permission-prompts` | After first full build cycle — scan transcripts and tighten allowlist |
-| `security-review` | Before first public deploy — scan for exposed keys, unsafe links |
-| `review` | When opening a PR for a new section or content update |
+| Skill                      | When to Use                                                                 |
+| -------------------------- | --------------------------------------------------------------------------- |
+| `update-config`            | Adding/changing permissions in `.claude/settings.json` or configuring hooks |
+| `simplify`                 | After implementing a section — review for quality and reuse opportunities   |
+| `fewer-permission-prompts` | After first full build cycle — scan transcripts and tighten allowlist       |
+| `security-review`          | Before first public deploy — scan for exposed keys, unsafe links            |
+| `review`                   | When opening a PR for a new section or content update                       |
 
 ---
 
@@ -206,27 +206,27 @@ setforge-fitness/
 
 ### Color Tokens
 
-| Token | Value | Usage |
-|---|---|---|
-| `--color-bg` | `#0f172a` (slate-900) | Page background |
-| `--color-surface` | `#1e293b` (slate-800) | Cards, nav |
-| `--color-surface-2` | `#334155` (slate-700) | Hover states, dividers |
-| `--color-accent` | `#3b82f6` (blue-500) | CTAs, highlights |
-| `--color-accent-hover` | `#2563eb` (blue-600) | CTA hover |
-| `--color-text` | `#f1f5f9` (slate-100) | Primary text |
-| `--color-text-muted` | `#94a3b8` (slate-400) | Secondary text |
-| `--color-success` | `#22c55e` (green-500) | Feature icons |
-| `--color-border` | `#334155` (slate-700) | Subtle borders |
+| Token                  | Value                 | Usage                  |
+| ---------------------- | --------------------- | ---------------------- |
+| `--color-bg`           | `#0f172a` (slate-900) | Page background        |
+| `--color-surface`      | `#1e293b` (slate-800) | Cards, nav             |
+| `--color-surface-2`    | `#334155` (slate-700) | Hover states, dividers |
+| `--color-accent`       | `#3b82f6` (blue-500)  | CTAs, highlights       |
+| `--color-accent-hover` | `#2563eb` (blue-600)  | CTA hover              |
+| `--color-text`         | `#f1f5f9` (slate-100) | Primary text           |
+| `--color-text-muted`   | `#94a3b8` (slate-400) | Secondary text         |
+| `--color-success`      | `#22c55e` (green-500) | Feature icons          |
+| `--color-border`       | `#334155` (slate-700) | Subtle borders         |
 
 ### Typography Scale
 
-| Role | Tailwind Class | Notes |
-|---|---|---|
-| Hero headline | `text-5xl lg:text-7xl` | Bold, tight line height |
-| Section headline | `text-3xl lg:text-4xl` | Semi-bold |
-| Feature title | `text-xl` | Semi-bold |
-| Body | `text-base` | Regular |
-| Caption/label | `text-sm` | Muted color |
+| Role             | Tailwind Class         | Notes                   |
+| ---------------- | ---------------------- | ----------------------- |
+| Hero headline    | `text-5xl lg:text-7xl` | Bold, tight line height |
+| Section headline | `text-3xl lg:text-4xl` | Semi-bold               |
+| Feature title    | `text-xl`              | Semi-bold               |
+| Body             | `text-base`            | Regular                 |
+| Caption/label    | `text-sm`              | Muted color             |
 
 ### Animation Rules
 

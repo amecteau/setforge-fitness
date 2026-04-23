@@ -39,6 +39,9 @@ export default defineConfig(
 	{
 		// Override or add rule settings here, such as:
 		// 'svelte/button-has-type': 'error'
-		rules: {}
+		rules: {
+			// This is a static promotional site with external-only links; no internal navigation resolve() needed.
+			'svelte/no-navigation-without-resolve': 'off'
+		}
 	}
 );

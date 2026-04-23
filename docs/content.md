@@ -41,14 +41,14 @@
 - **Section Headline**: Built for the Gym Floor
 - **Section Sub-headline**: Everything you need to track your progress. Nothing you don't.
 
-| Feature | Icon | Title | Description |
-|---|---|---|---|
-| 1 | Shield | No Account Required | Your data lives on your device. No sign-in, no cloud sync, no ads — ever. |
-| 2 | Tap | Tap to Count | One tap per rep. Built for sweaty hands, mid-set focus, and zero friction. |
-| 3 | History | Full Workout History | Every set, every exercise, every session — searchable and browsable, forever. |
-| 4 | Text | Scales With You | Four font sizes so the rep count is readable from across the room. |
-| 5 | Dumbbell | Custom Exercises | Add any lift to your library, not just what we decided to include. |
-| 6 | Device | Cross-Platform | The same app on Windows desktop and Android. Your history goes where you go. |
+| Feature | Icon     | Title                | Description                                                                   |
+| ------- | -------- | -------------------- | ----------------------------------------------------------------------------- |
+| 1       | Shield   | No Account Required  | Your data lives on your device. No sign-in, no cloud sync, no ads — ever.     |
+| 2       | Tap      | Tap to Count         | One tap per rep. Built for sweaty hands, mid-set focus, and zero friction.    |
+| 3       | History  | Full Workout History | Every set, every exercise, every session — searchable and browsable, forever. |
+| 4       | Text     | Scales With You      | Four font sizes so the rep count is readable from across the room.            |
+| 5       | Dumbbell | Custom Exercises     | Add any lift to your library, not just what we decided to include.            |
+| 6       | Device   | Cross-Platform       | The same app on Windows desktop and Android. Your history goes where you go.  |
 
 ---
 
@@ -57,10 +57,10 @@
 - **Section Headline**: See It in Action
 - **Section Sub-headline**: A focused interface designed for the moment you're in.
 
-| Screen | Caption |
-|---|---|
-| Counter | Tap to count. Weight entry optional. Save when your set is done. |
-| History | Browse every workout, every set, all the way back to day one. |
+| Screen    | Caption                                                           |
+| --------- | ----------------------------------------------------------------- |
+| Counter   | Tap to count. Weight entry optional. Save when your set is done.  |
+| History   | Browse every workout, every set, all the way back to day one.     |
 | Exercises | Your full exercise library — default lifts plus anything you add. |
 
 ---
@@ -70,10 +70,10 @@
 - **Section Headline**: Get SetForge Free
 - **Section Sub-headline**: Available now for Windows and Android.
 
-| Platform | CTA Label | Sub-label |
-|---|---|---|
-| Windows | Download for Windows | MSI installer — Windows 10/11 |
-| Android | Download for Android | APK — Android 8.0+ |
+| Platform | CTA Label            | Sub-label                     |
+| -------- | -------------------- | ----------------------------- |
+| Windows  | Download for Windows | MSI installer — Windows 10/11 |
+| Android  | Download for Android | APK — Android 8.0+            |
 
 - **Play Store Note**: Google Play Store listing coming soon.
 - **Source Note**: Prefer to build from source? The full code is on GitHub.
@@ -86,11 +86,11 @@
 - **Section Headline**: Your Reps Stay Yours
 - **Section Sub-headline**: No account. No tracking. No cloud. SetForge stores everything locally on your device.
 
-| Pillar | Icon | Title | Description |
-|---|---|---|---|
-| 1 | Lock | Local Storage Only | All workout data is stored in a SQLite database on your device. Nothing leaves. |
-| 2 | Eye-Off | No Analytics | Zero telemetry, zero tracking pixels, zero third-party scripts. |
-| 3 | Code | Open Source | The full source code is public. Audit it, fork it, or contribute. |
+| Pillar | Icon    | Title              | Description                                                                     |
+| ------ | ------- | ------------------ | ------------------------------------------------------------------------------- |
+| 1      | Lock    | Local Storage Only | All workout data is stored in a SQLite database on your device. Nothing leaves. |
+| 2      | Eye-Off | No Analytics       | Zero telemetry, zero tracking pixels, zero third-party scripts.                 |
+| 3      | Code    | Open Source        | The full source code is public. Audit it, fork it, or contribute.               |
 
 ---
 
