@@ -1,3 +1,11 @@
+## Project Configuration
+
+- **Language**: TypeScript
+- **Package Manager**: npm
+- **Add-ons**: prettier, eslint, vitest, tailwindcss, playwright
+
+---
+
 # SetForge Fitness — Claude Code Entry Point
 
 This is the **auto-loaded** Claude Code instruction file. Claude Code reads this file automatically at the start of every conversation.

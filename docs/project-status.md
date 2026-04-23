@@ -32,12 +32,12 @@
 
 | # | Task | Status | Notes |
 |---|---|---|---|
-| 1.1 | Scaffold SvelteKit with `npm create svelte@latest` | ⬜ | TypeScript, Tailwind v4, ESLint |
-| 1.2 | Configure `adapter-static` in `svelte.config.js` | ⬜ | Base path `/setforge-fitness` when `GITHUB_ACTIONS=true` |
-| 1.3 | Create `static/.nojekyll` | ⬜ | Required for GitHub Pages `_app/` |
-| 1.4 | Create `src/lib/site.config.ts` | ⬜ | All content, download links, metadata |
-| 1.5 | Update `src/app.html` with OG tags and meta | ⬜ | Title, description, OG image |
-| 1.6 | Write global `src/app.css` with design tokens | ⬜ | CSS vars, @keyframes, Tailwind base |
+| 1.1 | Scaffold SvelteKit with `npx sv create` | ✅ | Minimal, TypeScript, ESLint, Prettier, Vitest, Playwright, Tailwind v4 + typography |
+| 1.2 | Configure `adapter-static` in `svelte.config.js` | ✅ | Base path `/setforge-fitness` when `GITHUB_ACTIONS=true`; image 404s warn not error |
+| 1.3 | Create `static/.nojekyll` | ✅ | Required for GitHub Pages `_app/` |
+| 1.4 | Create `src/lib/site.config.ts` | ✅ | All content, download links, metadata; imports `base` from `$app/paths` |
+| 1.5 | Update `src/app.html` with OG tags and meta | ✅ | Title, description, OG + Twitter card meta |
+| 1.6 | Write global `src/app.css` with design tokens | ✅ | CSS vars, @keyframes fade-in/slide-up, reduced-motion, Tailwind base |
 
 ---
 
@@ -47,9 +47,9 @@
 
 | # | Task | Status | Notes |
 |---|---|---|---|
-| 2.1 | Create `Button.svelte` shared component | ⬜ | Primary and secondary variants |
-| 2.2 | Create SVG icon components | ⬜ | Barbell, Shield, Device, Download, GitHub icons |
-| 2.3 | Write Vitest setup and Button smoke test | ⬜ | Validates test harness works |
+| 2.1 | Create `Button.svelte` shared component | ✅ | Primary and secondary variants; renders as `<a>`; external prop wires rel/target |
+| 2.2 | Create SVG icon components | ✅ | Shield, Tap, History, FontSize, Dumbbell, Device, Lock, EyeOff, Code, Download, GitHub |
+| 2.3 | Write Vitest setup and Button smoke test | ✅ | `.svelte.spec.ts` written; runs in browser mode — requires task 5.4 (playwright install) |
 
 ---
 
@@ -89,6 +89,7 @@
 | 5.1 | Write `.github/workflows/ci.yml` | ⬜ | On PR: svelte-check, lint, vitest, build |
 | 5.2 | Write `.github/workflows/deploy.yml` | ⬜ | On push to main: build → gh-pages branch |
 | 5.3 | Enable GitHub Pages in repo settings | ⬜ | Source: `gh-pages` branch, root `/` |
+| 5.4 | Install Playwright browsers and write first E2E smoke test | ⬜ | `npx playwright install --with-deps`; deferred from scaffold; wire into ci.yml |
 
 ---
 
@@ -111,6 +112,8 @@
 | Milestone | Date |
 |---|---|
 | Phase 0 complete — harness documentation written | 2026-04-21 |
+| Phase 1 complete — scaffold, config, site.config.ts, app.html, app.css | 2026-04-22 |
+| Phase 2 complete — Button, 11 SVG icons, Vitest smoke test | 2026-04-22 |
 
 ---
 
@@ -126,3 +129,10 @@
 | 2026-04-21 | Dark-first design | Matches app aesthetic; gym context (variable lighting); avoids glare |
 | 2026-04-21 | No JS animation libraries | CSS-only animations keep bundle small and respect reduced-motion trivially |
 | 2026-04-21 | CLAUDE.md + AGENTS.md dual-file pattern | CLAUDE.md auto-loads every session (entry point + quick ref); AGENTS.md is the full authoritative architecture guide. Keeps the auto-loaded file short while preserving detailed rules separately |
+| 2026-04-22 | Scaffold CLI is `npx sv create` (not `npm create svelte@latest`) | SvelteKit team migrated to the `sv` package; `npm create svelte@latest` is deprecated |
+| 2026-04-22 | Minimal template (not Skeleton) | Skeleton template no longer exists in `sv create`; Minimal gives a bare `+page.svelte` with no demo content |
+| 2026-04-22 | TypeScript, ESLint, Prettier selected at scaffold | TypeScript for type safety per AGENTS.md rules; ESLint + Prettier for consistent style |
+| 2026-04-22 | Vitest selected at scaffold | Unit tests for shared components (Button smoke test in Phase 2) |
+| 2026-04-22 | Playwright selected at scaffold | E2E smoke tests for page load, CTA visibility, responsive breakpoints (375px / 1280px); runs in CI via GitHub Actions using official Playwright action which handles headless browser install |
+| 2026-04-22 | Tailwind CSS selected at scaffold with typography plugin only | `sv create` now offers Tailwind v4 natively, replacing planned manual install; only typography plugin needed — forms and aspect-ratio plugins not required for a promo site |
+| 2026-04-22 | npm as package manager | Consistent with setforge-app; no monorepo tooling needed |
