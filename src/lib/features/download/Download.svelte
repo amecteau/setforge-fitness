@@ -5,7 +5,6 @@
 	import WindowsIcon from '$lib/shared/icons/WindowsIcon.svelte';
 	import AndroidIcon from '$lib/shared/icons/AndroidIcon.svelte';
 	import AppleIcon from '$lib/shared/icons/AppleIcon.svelte';
-	import { resolve } from '$app/paths';
 	import type { Component } from 'svelte';
 
 	let {
@@ -70,10 +69,10 @@
 		<div class="text-center">
 			<p class="mb-3 text-sm text-slate-400">{download.sourceNote}</p>
 			<a
-				href={resolve(links.githubRepo)}
+				href={links.githubRepo}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="inline-flex items-center gap-2 text-sm text-slate-300 transition-colors duration-200 hover:text-slate-100 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none"
+				class="inline-flex items-center gap-2 text-sm text-slate-300 transition-colors duration-200 hover:text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
 			>
 				<GitHubIcon class="h-4 w-4" />
 				{download.githubCta}
