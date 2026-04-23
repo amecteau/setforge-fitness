@@ -74,9 +74,9 @@
 
 | # | Task | Status | Notes |
 |---|---|---|---|
-| 4.1 | Write `+layout.svelte` | ⬜ | Scroll behavior, minimal shell |
-| 4.2 | Write `+page.svelte` | ⬜ | Compose all 6 feature sections |
-| 4.3 | Add scroll-reveal animation | ⬜ | Intersection Observer, respects reduced motion |
+| 4.1 | Write `+layout.svelte` | ✅ | Skip-to-content link, app.css import |
+| 4.2 | Write `+page.svelte` | ✅ | All 6 sections composed, iconSrc from site.config.ts |
+| 4.3 | Add scroll-reveal animation | ✅ | Intersection Observer action in shared/actions/reveal.ts; respects reduced motion |
 
 ---
 
@@ -115,6 +115,7 @@
 | Phase 1 complete — scaffold, config, site.config.ts, app.html, app.css | 2026-04-22 |
 | Phase 2 complete — Button, 11 SVG icons, Vitest smoke test | 2026-04-22 |
 | Phase 3 complete — Hero, Features, Screenshots, Download, Privacy, Footer | 2026-04-22 |
+| Phase 4 complete — layout shell, page composition, scroll-reveal action | 2026-04-22 |
 
 ---
 

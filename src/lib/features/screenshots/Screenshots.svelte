@@ -2,6 +2,12 @@
 	import type { SiteConfig } from '$lib/site.config.js';
 
 	let { screenshots }: { screenshots: SiteConfig['screenshots'] } = $props();
+
+	let failedImages = $state(new Set<string>());
+
+	function handleImgError(id: string) {
+		failedImages = new Set([...failedImages, id]);
+	}
 </script>
 
 <section id="screenshots" aria-labelledby="screenshots-headline" class="section">
@@ -23,8 +29,13 @@
 				<div class="frame-wrapper">
 					<div class="device-frame">
 						<div class="screen">
-							{#if item.src}
-								<img src={item.src} alt={item.alt} class="h-full w-full object-cover" />
+							{#if item.src && !failedImages.has(item.id)}
+								<img
+									src={item.src}
+									alt={item.alt}
+									class="h-full w-full object-cover"
+									onerror={() => handleImgError(item.id)}
+								/>
 							{:else}
 								<div class="placeholder">
 									<span>Screenshot coming soon</span>

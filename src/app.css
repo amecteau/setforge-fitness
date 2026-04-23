@@ -39,6 +39,15 @@ html {
 	}
 }
 
+.reveal-hidden {
+	opacity: 0;
+	transform: translateY(1.5rem);
+}
+
+.reveal-visible {
+	animation: slide-up 500ms ease-out forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
 	*,
 	*::before,

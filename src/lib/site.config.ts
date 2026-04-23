@@ -8,6 +8,8 @@ export const siteConfig = {
 	longDescription:
 		'SetForge is built for the gym floor — not a dashboard. Tap to count each rep, log the weight, save the set. Your full workout history lives on your device, searchable and private. No subscription, no account required, no data sent anywhere.',
 
+	iconSrc: `${base}/icon.png`,
+
 	meta: {
 		title: 'SetForge — Privacy-First Gym Rep Counter',
 		ogTitle: 'SetForge — Count Every Rep. Own Your Progress.',
