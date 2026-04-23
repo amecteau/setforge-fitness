@@ -87,7 +87,7 @@
 | # | Task | Status | Notes |
 |---|---|---|---|
 | 5.1 | Write `.github/workflows/ci.yml` | ✅ | On PR: type-check, lint, unit tests, build; skips Playwright browser download |
-| 5.2 | Write `.github/workflows/deploy.yml` | ✅ | On push to main: build → gh-pages branch via peaceiris/actions-gh-pages@v3 |
+| 5.2 | Write `.github/workflows/deploy.yml` | ✅ | On push to main: build → GitHub Pages via actions/upload-pages-artifact + actions/deploy-pages |
 | 5.3 | Enable GitHub Pages in repo settings | ⬜ | Source: `gh-pages` branch, root `/` |
 | 5.4 | Install Playwright browsers and write first E2E smoke test | ⬜ | `npx playwright install --with-deps`; deferred from scaffold; wire into ci.yml |
 
@@ -111,25 +111,22 @@
 
 > Steps that require human action outside the codebase (GitHub UI, terminal commands, etc.)
 
-### Step 1 — Push the current branch to GitHub (prerequisite for everything below)
+### Step 1 — Enable GitHub Pages in repo settings (task 5.3) — do this FIRST
+1. Go to `https://github.com/amecteau/setforge-fitness` → **Settings** → **Pages**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. No branch selection needed — leave everything else as-is and click **Save**
+
+This uses the modern Actions-based deployment (no `gh-pages` branch required). The workflow handles everything.
+
+---
+
+### Step 2 — Push the current branch to GitHub
 ```
 git add .
 git commit -m "Phase 3–5: all sections, routing, CI/CD workflows"
 git push origin main
 ```
-Pushing to `main` will trigger `deploy.yml` for the first time. The `gh-pages` branch will be created automatically by `peaceiris/actions-gh-pages`.
-
----
-
-### Step 2 — Enable GitHub Pages in repo settings (task 5.3)
-1. Go to `https://github.com/amecteau/setforge-fitness` → **Settings** → **Pages**
-2. Under **Build and deployment**, set **Source** to `Deploy from a branch`
-3. Set **Branch** to `gh-pages`, folder `/` (root)
-4. Click **Save**
-
-The live URL will be: `https://amecteau.github.io/setforge-fitness`
-
-> Note: The `gh-pages` branch must exist before you can select it. It is created on the first successful run of `deploy.yml`, so push to `main` first (Step 1), wait for the Action to finish, then configure Pages.
+Pushing to `main` triggers `deploy.yml`. The site will be live at `https://amecteau.github.io/setforge-fitness` once the Action completes (typically ~1–2 minutes).
 
 ---
 
@@ -187,4 +184,5 @@ Recommended capture size: portrait phone ratio (~390×844 px). Once added, the p
 | 2026-04-22 | Vitest selected at scaffold | Unit tests for shared components (Button smoke test in Phase 2) |
 | 2026-04-22 | Playwright selected at scaffold | E2E smoke tests for page load, CTA visibility, responsive breakpoints (375px / 1280px); runs in CI via GitHub Actions using official Playwright action which handles headless browser install |
 | 2026-04-22 | Tailwind CSS selected at scaffold with typography plugin only | `sv create` now offers Tailwind v4 natively, replacing planned manual install; only typography plugin needed — forms and aspect-ratio plugins not required for a promo site |
+| 2026-04-22 | Switched deploy.yml from peaceiris/actions-gh-pages to official actions/deploy-pages | GitHub Pages now recommends "GitHub Actions" as the source; no gh-pages branch needed; avoids third-party action and the chicken-and-egg branch creation problem |
 | 2026-04-22 | npm as package manager | Consistent with setforge-app; no monorepo tooling needed |
