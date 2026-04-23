@@ -67,15 +67,13 @@ export const siteConfig = {
 				id: 'tap-to-count',
 				icon: 'tap',
 				title: 'Tap to Count',
-				description:
-					'One tap per rep. Built for sweaty hands, mid-set focus, and zero friction.'
+				description: 'One tap per rep. Built for sweaty hands, mid-set focus, and zero friction.'
 			},
 			{
 				id: 'history',
 				icon: 'history',
 				title: 'Full Workout History',
-				description:
-					'Every set, every exercise, every session — searchable and browsable, forever.'
+				description: 'Every set, every exercise, every session — searchable and browsable, forever.'
 			},
 			{
 				id: 'scales',
@@ -93,8 +91,7 @@ export const siteConfig = {
 				id: 'cross-platform',
 				icon: 'device',
 				title: 'Cross-Platform',
-				description:
-					'The same app on Windows desktop and Android. Your history goes where you go.'
+				description: 'The same app on Windows desktop and Android. Your history goes where you go.'
 			}
 		]
 	},

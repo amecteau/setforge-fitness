@@ -25,21 +25,11 @@
 
 		<!-- Row 2: links -->
 		<div class="flex flex-wrap justify-center gap-6">
-			<a
-				href={links.githubRepo}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="footer-link"
-			>
+			<a href={links.githubRepo} target="_blank" rel="noopener noreferrer" class="footer-link">
 				<GitHubIcon class="h-4 w-4" />
 				GitHub
 			</a>
-			<a
-				href={links.githubIssues}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="footer-link"
-			>
+			<a href={links.githubIssues} target="_blank" rel="noopener noreferrer" class="footer-link">
 				Support / Issues
 			</a>
 		</div>
@@ -65,6 +55,6 @@
 	}
 
 	.footer-link {
-		@apply inline-flex items-center gap-1.5 text-sm text-slate-400 transition-colors duration-200 hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900;
+		@apply inline-flex items-center gap-1.5 text-sm text-slate-400 transition-colors duration-200 hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none;
 	}
 </style>

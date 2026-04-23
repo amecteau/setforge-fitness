@@ -110,6 +110,7 @@ src/lib/site.config.ts       (config layer — no imports)
 ```
 
 Forbidden flows (ESLint enforced):
+
 - Feature → Feature (sections never import each other)
 - Shared → Feature (shared is atomic, never pulls from features)
 - Config → Anything (config has zero imports)
