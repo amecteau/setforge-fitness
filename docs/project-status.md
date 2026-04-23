@@ -119,11 +119,13 @@ Add these records:
 
 | Type | Host | Value | TTL |
 |------|------|-------|-----|
-| A | @ | 185.199.108.153 | 3600 |
-| A | @ | 185.199.109.153 | 3600 |
-| A | @ | 185.199.110.153 | 3600 |
-| A | @ | 185.199.111.153 | 3600 |
-| CNAME | www | amecteau.github.io | 3600 |
+| A | @ | 185.199.108.153 | 14400 |
+| A | @ | 185.199.109.153 | 14400 |
+| A | @ | 185.199.110.153 | 14400 |
+| A | @ | 185.199.111.153 | 14400 |
+| CNAME | www | amecteau.github.io | 14400 |
+
+TTL is in seconds — 14400 = 4 hours. It controls how long DNS resolvers around the world cache these records before re-querying. A longer TTL means faster lookups for visitors (record stays cached), but if you ever need to change these records, the old values can persist for up to 4 hours during propagation.
 
 - The 4 A records point the apex domain (`setforge.fitness`) at GitHub's servers
 - The CNAME record makes `www.setforge.fitness` redirect to the apex
