@@ -111,22 +111,43 @@
 
 > Steps that require human action outside the codebase (GitHub UI, terminal commands, etc.)
 
-### Step 1 — Enable GitHub Pages in repo settings (task 5.3) — do this FIRST
-1. Go to `https://github.com/amecteau/setforge-fitness` → **Settings** → **Pages**
-2. Under **Build and deployment**, set **Source** to **GitHub Actions**
-3. No branch selection needed — leave everything else as-is and click **Save**
+### Step 1 — Configure DNS at Squarespace (do this first — DNS takes time to propagate)
 
-This uses the modern Actions-based deployment (no `gh-pages` branch required). The workflow handles everything.
+In Squarespace: **Domains** → `setforge.fitness` → **DNS Settings** → **Custom Records**
+
+Add these records:
+
+| Type | Host | Value | TTL |
+|------|------|-------|-----|
+| A | @ | 185.199.108.153 | 3600 |
+| A | @ | 185.199.109.153 | 3600 |
+| A | @ | 185.199.110.153 | 3600 |
+| A | @ | 185.199.111.153 | 3600 |
+| CNAME | www | amecteau.github.io | 3600 |
+
+- The 4 A records point the apex domain (`setforge.fitness`) at GitHub's servers
+- The CNAME record makes `www.setforge.fitness` redirect to the apex
+
+DNS propagation typically takes 10–30 minutes but can be up to 24 hours.
 
 ---
 
-### Step 2 — Push the current branch to GitHub
+### Step 2 — Enable GitHub Pages in repo settings (task 5.3)
+1. Go to `https://github.com/amecteau/setforge-fitness` → **Settings** → **Pages**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. Under **Custom domain**, enter `setforge.fitness` and click **Save**
+4. GitHub will run a DNS check — it will go green once DNS propagates from Step 1
+5. Once verified, check **Enforce HTTPS** (GitHub provisions a free TLS certificate via Let's Encrypt)
+
+---
+
+### Step 3 — Push the current branch to GitHub
 ```
 git add .
-git commit -m "Phase 3–5: all sections, routing, CI/CD workflows"
+git commit -m "Phase 3–5: all sections, routing, CI/CD, custom domain"
 git push origin main
 ```
-Pushing to `main` triggers `deploy.yml`. The site will be live at `https://amecteau.github.io/setforge-fitness` once the Action completes (typically ~1–2 minutes).
+Pushing to `main` triggers `deploy.yml`. The site will be live at `https://setforge.fitness` once the Action completes (~1–2 minutes) and DNS has propagated.
 
 ---
 
@@ -185,4 +206,5 @@ Recommended capture size: portrait phone ratio (~390×844 px). Once added, the p
 | 2026-04-22 | Playwright selected at scaffold | E2E smoke tests for page load, CTA visibility, responsive breakpoints (375px / 1280px); runs in CI via GitHub Actions using official Playwright action which handles headless browser install |
 | 2026-04-22 | Tailwind CSS selected at scaffold with typography plugin only | `sv create` now offers Tailwind v4 natively, replacing planned manual install; only typography plugin needed — forms and aspect-ratio plugins not required for a promo site |
 | 2026-04-22 | Switched deploy.yml from peaceiris/actions-gh-pages to official actions/deploy-pages | GitHub Pages now recommends "GitHub Actions" as the source; no gh-pages branch needed; avoids third-party action and the chicken-and-egg branch creation problem |
+| 2026-04-22 | Custom domain setforge.fitness (apex) registered via Squarespace | Removed base path `/setforge-fitness` from svelte.config.js — custom domain serves from root `/`; static/CNAME file added so domain persists across deploys; DNS uses 4 A records + www CNAME |
 | 2026-04-22 | npm as package manager | Consistent with setforge-app; no monorepo tooling needed |

@@ -1,7 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
 
-const base = process.env.GITHUB_ACTIONS === 'true' ? '/setforge-fitness' : '';
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	compilerOptions: {
@@ -9,7 +7,6 @@ const config = {
 	},
 	kit: {
 		adapter: adapter(),
-		paths: { base },
 		prerender: {
 			handleHttpError: ({ path, message }) => {
 				// Static assets (og-image, screenshots, favicon) are added in Phase 6 — ignore their 404s

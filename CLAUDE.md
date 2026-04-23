@@ -16,7 +16,7 @@ This is the **auto-loaded** Claude Code instruction file. Claude Code reads this
 
 A professional GitHub Pages promotional website for **SetForge** — a privacy-first gym rep counter app for Windows and Android. Built with SvelteKit + Tailwind CSS v4, deployed via GitHub Actions.
 
-- **Live site**: `https://amecteau.github.io/setforge-fitness`
+- **Live site**: `https://setforge.fitness`
 - **App repo**: `https://github.com/amecteau/setforge-app`
 
 ---

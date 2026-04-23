@@ -8,7 +8,7 @@ You are working on the **promotional website** for SetForge, a privacy-first gym
 
 A professional, app-store-quality promotional website for SetForge — a desktop (Windows) and mobile (Android) gym rep counter application. The site is a single-page layout with smooth-scroll sections, built with SvelteKit + Tailwind CSS v4, and deployed to GitHub Pages via GitHub Actions.
 
-**Live URL**: `https://amecteau.github.io/setforge-fitness`
+**Live URL**: `https://setforge.fitness`
 **App repo**: `https://github.com/amecteau/setforge-app`
 
 ### Key Reference Files
