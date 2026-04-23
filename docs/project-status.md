@@ -48,7 +48,7 @@
 | # | Task | Status | Notes |
 |---|---|---|---|
 | 2.1 | Create `Button.svelte` shared component | ✅ | Primary and secondary variants; renders as `<a>`; external prop wires rel/target |
-| 2.2 | Create SVG icon components | ✅ | Shield, Tap, History, FontSize, Dumbbell, Device, Lock, EyeOff, Code, Download, GitHub |
+| 2.2 | Create SVG icon components | ✅ | Shield, Tap, History, FontSize, Dumbbell, Device, Lock, EyeOff, Code, Download, GitHub, Windows, Android, Apple (placeholder) |
 | 2.3 | Write Vitest setup and Button smoke test | ✅ | `.svelte.spec.ts` written; runs in browser mode — requires task 5.4 (playwright install) |
 
 ---
@@ -59,11 +59,11 @@
 
 | # | Task | Status | Notes |
 |---|---|---|---|
-| 3.1 | Build Hero section | ⬜ | Logo, headline, sub-headline, 2 CTA buttons |
-| 3.2 | Build Features grid section | ⬜ | 6 feature cards, 3-col desktop / 1-col mobile |
-| 3.3 | Build Screenshots section | ⬜ | CSS device frames, 3 screens |
-| 3.4 | Build Download section | ⬜ | Windows + Android CTAs, GitHub link |
-| 3.5 | Build Privacy section | ⬜ | 3-col icon grid |
+| 3.1 | Build Hero section | ✅ | Icon, badge, headline, sub-headline, 2 CTAs, GitHub link; fade-in animation |
+| 3.2 | Build Features grid section | ✅ | 6 cards, 3-col desktop / 1-col mobile; dynamic icon map; hover border accent |
+| 3.3 | Build Screenshots section | ✅ | CSS device frames, placeholder state, 3 screens |
+| 3.4 | Build Download section | ✅ | Windows + Android CTAs, Apple coming-soon card, GitHub link |
+| 3.5 | Build Privacy section | ✅ | 3-col icon grid, open-card style |
 | 3.6 | Build Footer | ⬜ | Links, version, copyright |
 
 ---

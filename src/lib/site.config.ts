@@ -25,12 +25,20 @@ export const siteConfig = {
 		windows: {
 			url: 'https://github.com/amecteau/setforge-app/releases/latest',
 			label: 'Download for Windows',
-			sublabel: 'MSI installer — Windows 10/11'
+			sublabel: 'MSI installer — Windows 10/11',
+			comingSoon: false
 		},
 		android: {
 			url: 'https://github.com/amecteau/setforge-app/releases/latest',
 			label: 'Download for Android',
-			sublabel: 'APK — Android 8.0+'
+			sublabel: 'APK — Android 8.0+',
+			comingSoon: false
+		},
+		apple: {
+			url: '',
+			label: 'Download for macOS / iOS',
+			sublabel: 'macOS 13+ / iOS 16+',
+			comingSoon: true
 		}
 	},
 
@@ -116,8 +124,9 @@ export const siteConfig = {
 
 	download: {
 		headline: 'Get SetForge Free',
-		subheadline: 'Available now for Windows and Android.',
+		subheadline: 'Available now for Windows and Android. macOS and iOS coming soon.',
 		playStoreNote: 'Google Play Store listing coming soon.',
+		appleNote: 'macOS and iOS support coming soon.',
 		sourceNote: 'Prefer to build from source? The full code is on GitHub.',
 		githubCta: 'View Source on GitHub'
 	},
