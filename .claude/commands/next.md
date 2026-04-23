@@ -5,6 +5,7 @@ Read docs/project-status.md and determine the next action:
 3. If there's a 🔄 (in progress) task, that takes priority — resume it
 
 Tell me:
+
 - The task number and description
 - What files will be created or modified
 - Any dependencies on prior tasks (and whether they're complete)

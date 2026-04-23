@@ -29,9 +29,9 @@
 		<!-- Headline -->
 		<h1
 			id="hero-headline"
-			class="mb-6 text-5xl font-bold leading-tight tracking-tight text-slate-100 sm:text-6xl lg:text-7xl"
+			class="mb-6 text-5xl leading-tight font-bold tracking-tight text-slate-100 sm:text-6xl lg:text-7xl"
 		>
-			{#each headlineLines as line, i}
+			{#each headlineLines as line, i (i)}
 				{line}{#if i < headlineLines.length - 1}<br />{/if}
 			{/each}
 		</h1>
@@ -56,7 +56,7 @@
 			href={links.githubRepo}
 			target="_blank"
 			rel="noopener noreferrer"
-			class="inline-flex items-center gap-1.5 text-sm text-slate-400 transition-colors duration-200 hover:text-slate-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+			class="inline-flex items-center gap-1.5 text-sm text-slate-400 transition-colors duration-200 hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none"
 		>
 			<GitHubIcon class="h-4 w-4" />
 			{hero.ctaTertiary} →

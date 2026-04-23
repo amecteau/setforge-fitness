@@ -13,10 +13,7 @@
 <section id="screenshots" aria-labelledby="screenshots-headline" class="section">
 	<div class="section-inner">
 		<div class="mb-16 text-center">
-			<h2
-				id="screenshots-headline"
-				class="mb-4 text-3xl font-semibold text-slate-100 lg:text-4xl"
-			>
+			<h2 id="screenshots-headline" class="mb-4 text-3xl font-semibold text-slate-100 lg:text-4xl">
 				{screenshots.headline}
 			</h2>
 			<p class="mx-auto max-w-[36rem] text-base text-slate-400">

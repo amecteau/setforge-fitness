@@ -72,7 +72,7 @@
 				href={links.githubRepo}
 				target="_blank"
 				rel="noopener noreferrer"
-				class="inline-flex items-center gap-2 text-sm text-slate-300 transition-colors duration-200 hover:text-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+				class="inline-flex items-center gap-2 text-sm text-slate-300 transition-colors duration-200 hover:text-slate-100 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none"
 			>
 				<GitHubIcon class="h-4 w-4" />
 				{download.githubCta}

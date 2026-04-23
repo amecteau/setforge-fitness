@@ -26,7 +26,7 @@
 <style>
 	@reference "tailwindcss";
 	.btn {
-		@apply inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-base font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900;
+		@apply inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 text-base font-semibold transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none;
 	}
 	.btn-primary {
 		@apply bg-blue-500 text-white hover:bg-blue-600 active:bg-blue-700;
