@@ -60,7 +60,7 @@
 	}
 
 	.screenshots-row {
-		@apply flex justify-center gap-8 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:overflow-x-visible lg:pb-0;
+		@apply flex gap-8 overflow-x-auto pb-4 lg:grid lg:grid-cols-3 lg:overflow-x-visible lg:pb-0;
 	}
 
 	.frame-wrapper {
