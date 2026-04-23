@@ -64,7 +64,7 @@
 | 3.3 | Build Screenshots section | ✅ | CSS device frames, placeholder state, 3 screens |
 | 3.4 | Build Download section | ✅ | Windows + Android CTAs, Apple coming-soon card, GitHub link |
 | 3.5 | Build Privacy section | ✅ | 3-col icon grid, open-card style |
-| 3.6 | Build Footer | ⬜ | Links, version, copyright |
+| 3.6 | Build Footer | ✅ | Icon + name, GitHub/Issues links, copyright |
 
 ---
 
@@ -114,6 +114,7 @@
 | Phase 0 complete — harness documentation written | 2026-04-21 |
 | Phase 1 complete — scaffold, config, site.config.ts, app.html, app.css | 2026-04-22 |
 | Phase 2 complete — Button, 11 SVG icons, Vitest smoke test | 2026-04-22 |
+| Phase 3 complete — Hero, Features, Screenshots, Download, Privacy, Footer | 2026-04-22 |
 
 ---
 
