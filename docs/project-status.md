@@ -86,8 +86,8 @@
 
 | # | Task | Status | Notes |
 |---|---|---|---|
-| 5.1 | Write `.github/workflows/ci.yml` | ⬜ | On PR: svelte-check, lint, vitest, build |
-| 5.2 | Write `.github/workflows/deploy.yml` | ⬜ | On push to main: build → gh-pages branch |
+| 5.1 | Write `.github/workflows/ci.yml` | ✅ | On PR: type-check, lint, unit tests, build; skips Playwright browser download |
+| 5.2 | Write `.github/workflows/deploy.yml` | ✅ | On push to main: build → gh-pages branch via peaceiris/actions-gh-pages@v3 |
 | 5.3 | Enable GitHub Pages in repo settings | ⬜ | Source: `gh-pages` branch, root `/` |
 | 5.4 | Install Playwright browsers and write first E2E smoke test | ⬜ | `npx playwright install --with-deps`; deferred from scaffold; wire into ci.yml |
 
@@ -104,6 +104,56 @@
 | 6.3 | Cross-browser smoke test | ⬜ | Chrome, Firefox, Safari, mobile Chrome |
 | 6.4 | Run `/deploy` check and push to main | ⬜ | Verify live URL |
 | 6.5 | Run `/review` security check via `security-review` skill | ⬜ | Before public share |
+
+---
+
+## Manual Steps & Next Actions
+
+> Steps that require human action outside the codebase (GitHub UI, terminal commands, etc.)
+
+### Step 1 — Push the current branch to GitHub (prerequisite for everything below)
+```
+git add .
+git commit -m "Phase 3–5: all sections, routing, CI/CD workflows"
+git push origin main
+```
+Pushing to `main` will trigger `deploy.yml` for the first time. The `gh-pages` branch will be created automatically by `peaceiris/actions-gh-pages`.
+
+---
+
+### Step 2 — Enable GitHub Pages in repo settings (task 5.3)
+1. Go to `https://github.com/amecteau/setforge-fitness` → **Settings** → **Pages**
+2. Under **Build and deployment**, set **Source** to `Deploy from a branch`
+3. Set **Branch** to `gh-pages`, folder `/` (root)
+4. Click **Save**
+
+The live URL will be: `https://amecteau.github.io/setforge-fitness`
+
+> Note: The `gh-pages` branch must exist before you can select it. It is created on the first successful run of `deploy.yml`, so push to `main` first (Step 1), wait for the Action to finish, then configure Pages.
+
+---
+
+### Step 3 — Install Playwright browsers locally (task 5.4, local only)
+Run once in the project directory to enable local E2E testing:
+```
+npx playwright install --with-deps
+```
+This downloads Chromium, Firefox, and WebKit browser binaries (~300 MB). It is a one-time setup. CI handles its own browser install via the Playwright GitHub Action (to be added when task 5.4 is coded).
+
+---
+
+### Step 4 — Add real screenshots (task 6.1)
+Capture three screens from the SetForge app and save as:
+- `static/screenshots/counter.png` — the rep counter screen
+- `static/screenshots/history.png` — the workout history screen
+- `static/screenshots/exercises.png` — the exercise library screen
+
+Recommended capture size: portrait phone ratio (~390×844 px). Once added, the placeholder cards in the Screenshots section are replaced automatically — no code changes needed.
+
+---
+
+### Step 5 — Add the app icon (already done partially)
+`static/icon.png` and `static/favicon.png` have been added from the Tauri icons. If you want a higher-resolution icon (e.g. 512×512 for OG image), copy `src-tauri/icons/128x128@2x.png` or generate a 512px version and save as `static/og-image.png`.
 
 ---
 
