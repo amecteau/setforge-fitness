@@ -31,7 +31,7 @@
 			id="hero-headline"
 			class="mb-6 text-5xl leading-tight font-bold tracking-tight text-slate-100 sm:text-6xl lg:text-7xl"
 		>
-			{#each headlineLines as line, i}
+			{#each headlineLines as line, i (i)}
 				{line}{#if i < headlineLines.length - 1}<br />{/if}
 			{/each}
 		</h1>

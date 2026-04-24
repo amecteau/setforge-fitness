@@ -107,6 +107,23 @@
 
 ---
 
+## Phase 7 — Internationalisation (Spanish)
+
+**Exit criteria**: Site renders in Spanish when browser language is `es`; manual EN/ES toggle in footer persists preference via cookie; English remains default; static build unaffected.
+
+| #   | Task                                                                                 | Status | Notes                                                                                       |
+| --- | ------------------------------------------------------------------------------------ | ------ | ------------------------------------------------------------------------------------------- |
+| 7.1 | Install `@inlang/paraglide-sveltekit` and scaffold with `npx @inlang/paraglide-sveltekit init` | ⬜     | Creates `project.inlang/`, `messages/`, and registers Paraglide Vite plugin                 |
+| 7.2 | Extract all translatable strings from `site.config.ts` into `messages/en.json`      | ⬜     | Non-translatable fields (URLs, icon keys, asset paths) stay in `site.config.ts` as-is      |
+| 7.3 | Create `messages/es.json` with Spanish translations                                  | ⬜     | All keys from `en.json`; use `docs/content.md` as reference for copy intent                |
+| 7.4 | Refactor `site.config.ts` — convert to `getSiteConfig()` function using `m.*()` calls | ⬜     | Structural/config data stays `as const`; string fields replaced with Paraglide message fns |
+| 7.5 | Update `+page.svelte` to `$derived(getSiteConfig())`                                 | ⬜     | Reactive to language changes; no feature component files need editing                       |
+| 7.6 | Create `LanguageToggle.svelte` in `src/lib/shared/components/`                       | ⬜     | EN/ES toggle; reads `navigator.language` on first visit; persists choice to cookie          |
+| 7.7 | Add `<LanguageToggle>` to `Footer.svelte` and `<ParaglideJS>` wrapper to `+layout.svelte` | ⬜     | Toggle placed in footer; layout wrapper enables reactive language switching                 |
+| 7.8 | Verify `npm run build` and test language switching on static output                  | ⬜     | Confirm cookie persistence, browser-language auto-detection, and EN fallback                |
+
+---
+
 ## Manual Steps & Next Actions
 
 > Steps that require human action outside the codebase (GitHub UI, terminal commands, etc.)
@@ -219,3 +236,7 @@ Recommended capture size: portrait phone ratio (~390×844 px). Once added, the p
 | 2026-04-22 | Switched deploy.yml from peaceiris/actions-gh-pages to official actions/deploy-pages | GitHub Pages now recommends "GitHub Actions" as the source; no gh-pages branch needed; avoids third-party action and the chicken-and-egg branch creation problem                                  |
 | 2026-04-22 | Custom domain setforge.fitness (apex) registered via Squarespace                     | Removed base path `/setforge-fitness` from svelte.config.js — custom domain serves from root `/`; static/CNAME file added so domain persists across deploys; DNS uses 4 A records + www CNAME     |
 | 2026-04-22 | npm as package manager                                                               | Consistent with setforge-app; no monorepo tooling needed                                                                                                                                          |
+| 2026-04-23 | Chose Paraglide.js (`@inlang/paraglide-sveltekit`) for i18n                          | SvelteKit's officially recommended i18n library; compile-time code generation, type-safe `m.*()` message functions, zero runtime overhead                                                         |
+| 2026-04-23 | Cookie-based language strategy (not URL-based `/es/` routing)                        | Static adapter would require prerendering two full route trees for URL routing; cookie + `navigator.language` detection is simpler, fully client-side, and sufficient for a single-page promo site |
+| 2026-04-23 | Language toggle placed in Footer                                                     | Unobtrusive placement; footer is visible after scrolling the full page; keeps hero and nav areas clean                                                                                            |
+| 2026-04-23 | Keep `max-w-[36rem]` over `max-w-xl`                                                 | In Tailwind v4, `max-w-xl` = 32rem (512px), not 36rem. The arbitrary value is intentional — do not replace with the canonical class despite IDE suggestions                                      |
