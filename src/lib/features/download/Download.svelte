@@ -82,6 +82,7 @@
 </section>
 
 <style>
+ /* stylelint-disable-next-line at-rule-no-unknown */
 	@reference "tailwindcss";
 
 	.section {
@@ -105,4 +106,5 @@
 	.coming-soon-btn {
 		@apply w-full rounded-lg border border-slate-600 py-3 text-center text-sm font-medium text-slate-500;
 	}
+/* ... */
 </style>
