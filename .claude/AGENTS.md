@@ -249,6 +249,7 @@ setforge-fitness/
 8. `prefers-reduced-motion` respected in CSS animations
 9. `svelte-check` passes with zero errors
 10. `eslint` passes with zero warnings
-11. `npm run build` succeeds
-12. `static/.nojekyll` exists
-13. `site.config.ts` contains all links (no hardcoded URLs in components)
+11. `npx prettier --check .` passes with zero warnings (run `npx prettier --write .` to fix)
+12. `npm run build` succeeds
+13. `static/.nojekyll` exists
+14. `site.config.ts` contains all links (no hardcoded URLs in components)

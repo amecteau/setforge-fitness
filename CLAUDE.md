@@ -61,3 +61,4 @@ The relationship between these files:
 - Use `any` types
 - Use `px` units for layout sizing
 - Import `site.config.ts` anywhere except `+page.svelte`
+- Create or edit files without ensuring `npx prettier --check .` passes (run `npx prettier --write .` to fix)
