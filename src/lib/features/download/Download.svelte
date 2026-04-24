@@ -52,7 +52,7 @@
 					<p class="mb-6 text-center text-sm text-slate-400">{platform.sublabel}</p>
 
 					{#if platform.comingSoon}
-						<div class="coming-soon-btn">Coming Soon</div>
+						<div class="coming-soon-btn">{download.comingSoonLabel}</div>
 					{:else}
 						<Button href={platform.url} variant="primary" external>{platform.label}</Button>
 					{/if}

@@ -88,7 +88,7 @@
 | --- | ---------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------- |
 | 5.1 | Write `.github/workflows/ci.yml`                           | ✅     | On PR: type-check, lint, unit tests, build; skips Playwright browser download                  |
 | 5.2 | Write `.github/workflows/deploy.yml`                       | ✅     | On push to main: build → GitHub Pages via actions/upload-pages-artifact + actions/deploy-pages |
-| 5.3 | Enable GitHub Pages in repo settings                       | ⬜     | Source: `gh-pages` branch, root `/`                                                            |
+| 5.3 | Enable GitHub Pages in repo settings                       | ✅     | Source: GitHub Actions; custom domain `setforge.fitness`; HTTPS enforced                       |
 | 5.4 | Install Playwright browsers and write first E2E smoke test | ⬜     | `npx playwright install --with-deps`; deferred from scaffold; wire into ci.yml                 |
 
 ---
@@ -99,11 +99,11 @@
 
 | #   | Task                                                     | Status | Notes                                  |
 | --- | -------------------------------------------------------- | ------ | -------------------------------------- |
-| 6.1 | Add real app screenshots to `static/screenshots/`        | ⬜     | Manual: capture from app               |
-| 6.2 | Run Lighthouse audit                                     | ⬜     | Performance 90+, Accessibility 95+     |
-| 6.3 | Cross-browser smoke test                                 | ⬜     | Chrome, Firefox, Safari, mobile Chrome |
-| 6.4 | Run `/deploy` check and push to main                     | ⬜     | Verify live URL                        |
-| 6.5 | Run `/review` security check via `security-review` skill | ⬜     | Before public share                    |
+| 6.1 | Add real app screenshots to `static/screenshots/`        | ✅     | counter.png, history.png, exercises.png added to static/screenshots/ |
+| 6.2 | Run Lighthouse audit                                     | ✅     | Performance 90+, Accessibility 95+     |
+| 6.3 | Cross-browser smoke test                                 | ✅     | Chrome, Firefox, Safari, mobile Chrome |
+| 6.4 | Run `/deploy` check and push to main                     | ✅     | Verify live URL                        |
+| 6.5 | Run `/review` security check via `security-review` skill | ✅     | Before public share                    |
 
 ---
 

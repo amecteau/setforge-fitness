@@ -99,6 +99,7 @@ export const siteConfig = {
 	screenshots: {
 		headline: 'See It in Action',
 		subheadline: "A focused interface designed for the moment you're in.",
+		placeholderLabel: 'Screenshot coming soon',
 		items: [
 			{
 				id: 'counter',
@@ -124,6 +125,7 @@ export const siteConfig = {
 	download: {
 		headline: 'Get SetForge Free',
 		subheadline: 'Available now for Windows and Android. macOS and iOS coming soon.',
+		comingSoonLabel: 'Coming Soon',
 		playStoreNote: 'Google Play Store listing coming soon.',
 		appleNote: 'macOS and iOS support coming soon.',
 		sourceNote: 'Prefer to build from source? The full code is on GitHub.',

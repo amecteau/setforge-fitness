@@ -40,8 +40,8 @@ export default defineConfig(
 		// Override or add rule settings here, such as:
 		// 'svelte/button-has-type': 'error'
 		rules: {
-			// All external hrefs use absolute URLs — resolve() is for SvelteKit-internal paths only
-			'svelte/no-navigation-without-resolve': 'warn'
+			// All hrefs are external absolute URLs — resolve() is for SvelteKit-internal paths only
+			'svelte/no-navigation-without-resolve': 'off'
 		}
 	}
 );

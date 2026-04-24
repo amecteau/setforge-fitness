@@ -35,7 +35,7 @@
 								/>
 							{:else}
 								<div class="placeholder">
-									<span>Screenshot coming soon</span>
+									<span>{screenshots.placeholderLabel}</span>
 								</div>
 							{/if}
 						</div>
