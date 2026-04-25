@@ -23,11 +23,11 @@
 		apple: AppleIcon
 	};
 
-	const platforms = [
-		{ key: 'windows', ...downloads.windows },
-		{ key: 'android', ...downloads.android },
-		{ key: 'apple', ...downloads.apple }
-	] as const;
+	const platforms = $derived([
+		{ key: 'windows' as const, ...downloads.windows },
+		{ key: 'android' as const, ...downloads.android },
+		{ key: 'apple' as const, ...downloads.apple }
+	]);
 </script>
 
 <section id="download" aria-labelledby="download-headline" class="section">

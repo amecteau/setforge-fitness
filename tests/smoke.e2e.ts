@@ -31,7 +31,7 @@ test.describe('SetForge smoke tests', () => {
 		await page.setViewportSize({ width: 1280, height: 800 });
 		await page.goto('/');
 		await expect(page.getByText('No Account Required')).toBeVisible();
-		await expect(page.getByText('Tap to Count')).toBeVisible();
+		await expect(page.getByRole('heading', { name: 'Tap to Count' })).toBeVisible();
 		await expect(page.getByText('Cross-Platform')).toBeVisible();
 	});
 

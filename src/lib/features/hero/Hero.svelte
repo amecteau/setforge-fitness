@@ -15,7 +15,7 @@
 		iconSrc: string;
 	} = $props();
 
-	const headlineLines = hero.headline.split('\n');
+	const headlineLines = $derived(hero.headline.split('\n'));
 </script>
 
 <section id="hero" aria-labelledby="hero-headline" class="hero-section">

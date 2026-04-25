@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { SiteConfig } from '$lib/site.config.js';
 	import GitHubIcon from '$lib/shared/icons/GitHubIcon.svelte';
+	import LanguageToggle from '$lib/shared/components/LanguageToggle.svelte';
 
 	let {
 		footer,
@@ -27,10 +28,10 @@
 		<div class="flex flex-wrap justify-center gap-6">
 			<a href={links.githubRepo} target="_blank" rel="noopener noreferrer" class="footer-link">
 				<GitHubIcon class="h-4 w-4" />
-				GitHub
+				{footer.githubLabel}
 			</a>
 			<a href={links.githubIssues} target="_blank" rel="noopener noreferrer" class="footer-link">
-				Support / Issues
+				{footer.issuesLabel}
 			</a>
 		</div>
 
@@ -38,6 +39,11 @@
 		<p class="mt-6 text-xs text-slate-500">
 			{footer.copyright} · Built with {footer.builtWith}
 		</p>
+
+		<!-- Row 4: language toggle -->
+		<div class="mt-4">
+			<LanguageToggle />
+		</div>
 	</div>
 </footer>
 

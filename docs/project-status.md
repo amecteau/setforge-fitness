@@ -4,7 +4,13 @@
 
 ---
 
-## Current Phase: Phase 0 — Project Harness Documentation
+## Current Phase: Phase 7 Complete — All Phases Done ✅
+
+> Phases 0–7 are complete. The site is live at `https://setforge.fitness` with EN/ES i18n.
+
+---
+
+## Phase 0 — Project Harness Documentation
 
 **Exit criteria**: All harness docs written; `.claude/` structure matches AGENTS.md spec; team can orient from docs alone.
 
@@ -97,13 +103,13 @@
 
 **Exit criteria**: Lighthouse 90+ performance, 95+ accessibility; all real screenshots added; site live.
 
-| #   | Task                                                     | Status | Notes                                  |
-| --- | -------------------------------------------------------- | ------ | -------------------------------------- |
+| #   | Task                                                     | Status | Notes                                                                |
+| --- | -------------------------------------------------------- | ------ | -------------------------------------------------------------------- |
 | 6.1 | Add real app screenshots to `static/screenshots/`        | ✅     | counter.png, history.png, exercises.png added to static/screenshots/ |
-| 6.2 | Run Lighthouse audit                                     | ✅     | Performance 90+, Accessibility 95+     |
-| 6.3 | Cross-browser smoke test                                 | ✅     | Chrome, Firefox, Safari, mobile Chrome |
-| 6.4 | Run `/deploy` check and push to main                     | ✅     | Verify live URL                        |
-| 6.5 | Run `/review` security check via `security-review` skill | ✅     | Before public share                    |
+| 6.2 | Run Lighthouse audit                                     | ✅     | Performance 90+, Accessibility 95+                                   |
+| 6.3 | Cross-browser smoke test                                 | ✅     | Chrome, Firefox, Safari, mobile Chrome                               |
+| 6.4 | Run `/deploy` check and push to main                     | ✅     | Verify live URL                                                      |
+| 6.5 | Run `/review` security check via `security-review` skill | ✅     | Before public share                                                  |
 
 ---
 
@@ -111,16 +117,16 @@
 
 **Exit criteria**: Site renders in Spanish when browser language is `es`; manual EN/ES toggle in footer persists preference via cookie; English remains default; static build unaffected.
 
-| #   | Task                                                                                 | Status | Notes                                                                                       |
-| --- | ------------------------------------------------------------------------------------ | ------ | ------------------------------------------------------------------------------------------- |
-| 7.1 | Install `@inlang/paraglide-sveltekit` and scaffold with `npx @inlang/paraglide-sveltekit init` | ⬜     | Creates `project.inlang/`, `messages/`, and registers Paraglide Vite plugin                 |
-| 7.2 | Extract all translatable strings from `site.config.ts` into `messages/en.json`      | ⬜     | Non-translatable fields (URLs, icon keys, asset paths) stay in `site.config.ts` as-is      |
-| 7.3 | Create `messages/es.json` with Spanish translations                                  | ⬜     | All keys from `en.json`; use `docs/content.md` as reference for copy intent                |
-| 7.4 | Refactor `site.config.ts` — convert to `getSiteConfig()` function using `m.*()` calls | ⬜     | Structural/config data stays `as const`; string fields replaced with Paraglide message fns |
-| 7.5 | Update `+page.svelte` to `$derived(getSiteConfig())`                                 | ⬜     | Reactive to language changes; no feature component files need editing                       |
-| 7.6 | Create `LanguageToggle.svelte` in `src/lib/shared/components/`                       | ⬜     | EN/ES toggle; reads `navigator.language` on first visit; persists choice to cookie          |
-| 7.7 | Add `<LanguageToggle>` to `Footer.svelte` and `<ParaglideJS>` wrapper to `+layout.svelte` | ⬜     | Toggle placed in footer; layout wrapper enables reactive language switching                 |
-| 7.8 | Verify `npm run build` and test language switching on static output                  | ⬜     | Confirm cookie persistence, browser-language auto-detection, and EN fallback                |
+| #   | Task                                                                                           | Status | Notes                                                                                                                                                                                    |
+| --- | ---------------------------------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 7.1 | Install `@inlang/paraglide-sveltekit` and scaffold with `npx @inlang/paraglide-sveltekit init` | ✅     | Used `@inlang/paraglide-js` v2 directly — `paraglideVitePlugin` in vite.config.ts; `project.inlang/settings.json`; `messages/en.json` + `messages/es.json`; outdir `./src/lib/paraglide` |
+| 7.2 | Extract all translatable strings from `site.config.ts` into `messages/en.json`                 | ✅     | 65 keys covering all sections; URLs, icon keys, asset paths stay in `site.config.ts`                                                                                                     |
+| 7.3 | Create `messages/es.json` with Spanish translations                                            | ✅     | All 65 keys translated                                                                                                                                                                   |
+| 7.4 | Refactor `site.config.ts` — convert to `getSiteConfig()` function using `m.*()` calls          | ✅     | All string fields use `m.*()`; structural data (URLs, booleans, ids) stays inline; `SiteConfig = ReturnType<typeof getSiteConfig>`                                                       |
+| 7.5 | Update `+page.svelte` to `$derived(getSiteConfig())`                                           | ✅     | `$derived.by` with `currentLocale()` dependency; Hero/Download fixed with `$derived` for reactive splits                                                                                 |
+| 7.6 | Create `LanguageToggle.svelte` in `src/lib/shared/components/`                                 | ✅     | EN/ES two-button toggle; `locale.svelte.ts` module wraps Paraglide `setLocale` with Svelte `$state`                                                                                      |
+| 7.7 | Add `<LanguageToggle>` to `Footer.svelte` and `<ParaglideJS>` wrapper to `+layout.svelte`      | ✅     | Toggle in footer row 4; no `<ParaglideJS>` wrapper needed in v2 — runtime handles it                                                                                                    |
+| 7.8 | Verify `npm run build` and test language switching on static output                            | ✅     | Build passes clean; ESLint 0 warnings; svelte-check 0 errors; `preferredLanguage` strategy auto-detects browser lang                                                                     |
 
 ---
 
@@ -207,11 +213,14 @@ Recommended capture size: portrait phone ratio (~390×844 px). Once added, the p
 
 | Milestone                                                                 | Date       |
 | ------------------------------------------------------------------------- | ---------- |
-| Phase 0 complete — harness documentation written                          | 2026-04-21 |
-| Phase 1 complete — scaffold, config, site.config.ts, app.html, app.css    | 2026-04-22 |
-| Phase 2 complete — Button, 11 SVG icons, Vitest smoke test                | 2026-04-22 |
-| Phase 3 complete — Hero, Features, Screenshots, Download, Privacy, Footer | 2026-04-22 |
-| Phase 4 complete — layout shell, page composition, scroll-reveal action   | 2026-04-22 |
+| Phase 0 complete — harness documentation written                                    | 2026-04-21 |
+| Phase 1 complete — scaffold, config, site.config.ts, app.html, app.css              | 2026-04-22 |
+| Phase 2 complete — Button, 11 SVG icons, Vitest smoke test                          | 2026-04-22 |
+| Phase 3 complete — Hero, Features, Screenshots, Download, Privacy, Footer           | 2026-04-22 |
+| Phase 4 complete — layout shell, page composition, scroll-reveal action             | 2026-04-22 |
+| Phase 5 complete — CI/CD workflows, GitHub Pages deployment, custom domain          | 2026-04-22 |
+| Phase 6 complete — real screenshots, Lighthouse, cross-browser, deploy, security    | 2026-04-24 |
+| Phase 7 complete — Paraglide i18n, EN/ES translations, language toggle in footer    | 2026-04-24 |
 
 ---
 
@@ -219,24 +228,24 @@ Recommended capture size: portrait phone ratio (~390×844 px). Once added, the p
 
 > Record any significant decisions about the harness, architecture, or tooling here. Include what was decided and why.
 
-| Date       | Decision                                                                             | Reason                                                                                                                                                                                            |
-| ---------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2026-04-21 | Chose SvelteKit + adapter-static over plain HTML                                     | Mirrors app tech stack; Tailwind v4 reuse; component model scales for future pages                                                                                                                |
-| 2026-04-21 | Single-page layout (not multi-page)                                                  | Promotional sites convert better with one scroll journey; simpler GitHub Pages config                                                                                                             |
-| 2026-04-21 | All content in `site.config.ts`                                                      | Updating links/copy should never require touching component files                                                                                                                                 |
-| 2026-04-21 | Dark-first design                                                                    | Matches app aesthetic; gym context (variable lighting); avoids glare                                                                                                                              |
-| 2026-04-21 | No JS animation libraries                                                            | CSS-only animations keep bundle small and respect reduced-motion trivially                                                                                                                        |
-| 2026-04-21 | CLAUDE.md + AGENTS.md dual-file pattern                                              | CLAUDE.md auto-loads every session (entry point + quick ref); AGENTS.md is the full authoritative architecture guide. Keeps the auto-loaded file short while preserving detailed rules separately |
-| 2026-04-22 | Scaffold CLI is `npx sv create` (not `npm create svelte@latest`)                     | SvelteKit team migrated to the `sv` package; `npm create svelte@latest` is deprecated                                                                                                             |
-| 2026-04-22 | Minimal template (not Skeleton)                                                      | Skeleton template no longer exists in `sv create`; Minimal gives a bare `+page.svelte` with no demo content                                                                                       |
-| 2026-04-22 | TypeScript, ESLint, Prettier selected at scaffold                                    | TypeScript for type safety per AGENTS.md rules; ESLint + Prettier for consistent style                                                                                                            |
-| 2026-04-22 | Vitest selected at scaffold                                                          | Unit tests for shared components (Button smoke test in Phase 2)                                                                                                                                   |
-| 2026-04-22 | Playwright selected at scaffold                                                      | E2E smoke tests for page load, CTA visibility, responsive breakpoints (375px / 1280px); runs in CI via GitHub Actions using official Playwright action which handles headless browser install     |
-| 2026-04-22 | Tailwind CSS selected at scaffold with typography plugin only                        | `sv create` now offers Tailwind v4 natively, replacing planned manual install; only typography plugin needed — forms and aspect-ratio plugins not required for a promo site                       |
-| 2026-04-22 | Switched deploy.yml from peaceiris/actions-gh-pages to official actions/deploy-pages | GitHub Pages now recommends "GitHub Actions" as the source; no gh-pages branch needed; avoids third-party action and the chicken-and-egg branch creation problem                                  |
-| 2026-04-22 | Custom domain setforge.fitness (apex) registered via Squarespace                     | Removed base path `/setforge-fitness` from svelte.config.js — custom domain serves from root `/`; static/CNAME file added so domain persists across deploys; DNS uses 4 A records + www CNAME     |
-| 2026-04-22 | npm as package manager                                                               | Consistent with setforge-app; no monorepo tooling needed                                                                                                                                          |
-| 2026-04-23 | Chose Paraglide.js (`@inlang/paraglide-sveltekit`) for i18n                          | SvelteKit's officially recommended i18n library; compile-time code generation, type-safe `m.*()` message functions, zero runtime overhead                                                         |
+| Date       | Decision                                                                             | Reason                                                                                                                                                                                             |
+| ---------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2026-04-21 | Chose SvelteKit + adapter-static over plain HTML                                     | Mirrors app tech stack; Tailwind v4 reuse; component model scales for future pages                                                                                                                 |
+| 2026-04-21 | Single-page layout (not multi-page)                                                  | Promotional sites convert better with one scroll journey; simpler GitHub Pages config                                                                                                              |
+| 2026-04-21 | All content in `site.config.ts`                                                      | Updating links/copy should never require touching component files                                                                                                                                  |
+| 2026-04-21 | Dark-first design                                                                    | Matches app aesthetic; gym context (variable lighting); avoids glare                                                                                                                               |
+| 2026-04-21 | No JS animation libraries                                                            | CSS-only animations keep bundle small and respect reduced-motion trivially                                                                                                                         |
+| 2026-04-21 | CLAUDE.md + AGENTS.md dual-file pattern                                              | CLAUDE.md auto-loads every session (entry point + quick ref); AGENTS.md is the full authoritative architecture guide. Keeps the auto-loaded file short while preserving detailed rules separately  |
+| 2026-04-22 | Scaffold CLI is `npx sv create` (not `npm create svelte@latest`)                     | SvelteKit team migrated to the `sv` package; `npm create svelte@latest` is deprecated                                                                                                              |
+| 2026-04-22 | Minimal template (not Skeleton)                                                      | Skeleton template no longer exists in `sv create`; Minimal gives a bare `+page.svelte` with no demo content                                                                                        |
+| 2026-04-22 | TypeScript, ESLint, Prettier selected at scaffold                                    | TypeScript for type safety per AGENTS.md rules; ESLint + Prettier for consistent style                                                                                                             |
+| 2026-04-22 | Vitest selected at scaffold                                                          | Unit tests for shared components (Button smoke test in Phase 2)                                                                                                                                    |
+| 2026-04-22 | Playwright selected at scaffold                                                      | E2E smoke tests for page load, CTA visibility, responsive breakpoints (375px / 1280px); runs in CI via GitHub Actions using official Playwright action which handles headless browser install      |
+| 2026-04-22 | Tailwind CSS selected at scaffold with typography plugin only                        | `sv create` now offers Tailwind v4 natively, replacing planned manual install; only typography plugin needed — forms and aspect-ratio plugins not required for a promo site                        |
+| 2026-04-22 | Switched deploy.yml from peaceiris/actions-gh-pages to official actions/deploy-pages | GitHub Pages now recommends "GitHub Actions" as the source; no gh-pages branch needed; avoids third-party action and the chicken-and-egg branch creation problem                                   |
+| 2026-04-22 | Custom domain setforge.fitness (apex) registered via Squarespace                     | Removed base path `/setforge-fitness` from svelte.config.js — custom domain serves from root `/`; static/CNAME file added so domain persists across deploys; DNS uses 4 A records + www CNAME      |
+| 2026-04-22 | npm as package manager                                                               | Consistent with setforge-app; no monorepo tooling needed                                                                                                                                           |
+| 2026-04-23 | Chose Paraglide.js (`@inlang/paraglide-sveltekit`) for i18n                          | SvelteKit's officially recommended i18n library; compile-time code generation, type-safe `m.*()` message functions, zero runtime overhead                                                          |
 | 2026-04-23 | Cookie-based language strategy (not URL-based `/es/` routing)                        | Static adapter would require prerendering two full route trees for URL routing; cookie + `navigator.language` detection is simpler, fully client-side, and sufficient for a single-page promo site |
-| 2026-04-23 | Language toggle placed in Footer                                                     | Unobtrusive placement; footer is visible after scrolling the full page; keeps hero and nav areas clean                                                                                            |
-| 2026-04-23 | Keep `max-w-[36rem]` over `max-w-xl`                                                 | In Tailwind v4, `max-w-xl` = 32rem (512px), not 36rem. The arbitrary value is intentional — do not replace with the canonical class despite IDE suggestions                                      |
+| 2026-04-23 | Language toggle placed in Footer                                                     | Unobtrusive placement; footer is visible after scrolling the full page; keeps hero and nav areas clean                                                                                             |
+| 2026-04-23 | Keep `max-w-[36rem]` over `max-w-xl`                                                 | In Tailwind v4, `max-w-xl` = 32rem (512px), not 36rem. The arbitrary value is intentional — do not replace with the canonical class despite IDE suggestions                                        |
