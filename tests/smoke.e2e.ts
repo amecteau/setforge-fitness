@@ -39,4 +39,14 @@ test.describe('SetForge smoke tests', () => {
 		await page.goto('/');
 		await expect(page.getByText('© 2026 SetForge')).toBeVisible();
 	});
+
+	test('screenshots carousel includes the settings screen', async ({ page }) => {
+		await page.goto('/');
+		await expect(
+			page.getByRole('img', { name: 'SetForge change app settings screen' })
+		).toBeVisible();
+		await expect(
+			page.getByText('Adjust Settings — Change language, font size etc....')
+		).toBeVisible();
+	});
 });

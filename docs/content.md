@@ -62,6 +62,7 @@
 | Counter   | Tap to count. Weight entry optional. Save when your set is done.  |
 | History   | Browse every workout, every set, all the way back to day one.     |
 | Exercises | Your full exercise library — default lifts plus anything you add. |
+| Settings  | Adjust Settings — Change language, font size etc....              |
 
 ---
 

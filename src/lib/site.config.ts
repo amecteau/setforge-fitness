@@ -117,6 +117,12 @@ export function getSiteConfig() {
 					src: `${base}/screenshots/exercises.png`,
 					alt: m.screenshot_exercises_alt(),
 					caption: m.screenshot_exercises_caption()
+				},
+				{
+					id: 'settings',
+					src: `${base}/screenshots/settings.png`,
+					alt: m.screenshot_settings_alt(),
+					caption: m.screenshot_settings_caption()
 				}
 			]
 		},

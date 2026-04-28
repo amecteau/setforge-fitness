@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 630" width="1200" height="630">
+	<defs>
+		<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0%" stop-color="#0f172a" />
+			<stop offset="100%" stop-color="#1e293b" />
+		</linearGradient>
+		<linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+			<stop offset="0%" stop-color="#3b82f6" />
+			<stop offset="100%" stop-color="#2563eb" />
+		</linearGradient>
+	</defs>
+
+	<rect width="1200" height="630" fill="url(#bg)" />
+
+	<g opacity="0.04" stroke="#94a3b8" stroke-width="1">
+		<line x1="0" y1="158" x2="1200" y2="158" />
+		<line x1="0" y1="315" x2="1200" y2="315" />
+		<line x1="0" y1="473" x2="1200" y2="473" />
+		<line x1="300" y1="0" x2="300" y2="630" />
+		<line x1="600" y1="0" x2="600" y2="630" />
+		<line x1="900" y1="0" x2="900" y2="630" />
+	</g>
+
+	<rect x="0" y="0" width="1200" height="6" fill="url(#accent)" />
+
+	<image x="110" y="215" width="200" height="200" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAC5UlEQVR4nO3csXHbMBiGYZCXOdx7Bq+QMn1mS58yK2gG91rEKXLM6SxS1EeJBkE+T2v5QgHv/QKUXLqy0Mvr28fS36W+8/upW/J70S+JZJ+SeO56oVCO4Z5w+rkXiOU47tnrm8GI5Xjm9nwyGLEc1629Hw1GLEw1cBWMWBiMtdDPvYBj+9xEP/UDGFy2MXuthkt9KaYL84ZGTBgigiHS+TgiYcIQEQwRwRARDBHBEBEMEcEQEQwRwRARDBHBEBEMEcEQEQwRwRARDBHBEBEMEcEQEQwRwRARDBHBEBEMEcEQEQwRwRARDBHBEBEMEcEQ+Vb7AUop5c/vX3e97vuPnys/ST2trEH1CXPvQqWvbUlLa1A1mCVvvvaCPVtra1B9wtAWwRARDBHBEBEMEcEQWfWLu1vXv9pfQO1BjfVdbcLMfVewt+9Tvlqt9V0lGDFswxr74AxDRDBEBEPk4VvS589Jt5/teeYePTRhxg5VDrzb8uw9WhyMMNq2dP+cYYgIhohgiGziH4EvsYczVIs3yiYnzB5iKaXN99FkMNQjGCKCISIYIk0G0+LtYkyL76PZa3WLi70HTU4Y6hEMEcEQWRyMM0Tblu7fQxNm7A8V0rY8e48eviUJZPueuUfOMEQEQ0QwRFYJxrlmG9bYh9UmzNzDiuoxtdZ31b9LEsW6aqyvMwwRwRARDBHBEBEMEcEQqRrMkmvh3q7qra1B9QmTvPm9xTJoaQ26l9e3j6pPQFOqTxjaIhgigiEiGCKCISIYIoIhIhgigiEiGCKCISIYIoIhIhgigiEiGCKCISIYIoIhIhgigiEiGCKCISIYIoIhIhgigiEiGCKCISIYIv35/dTVfgjacH4/dSYMEcEQ6Uv5N2pqPwjbNjRiwhD5H4wpw5TLNvqpH0Ap101cfSSJhsFYC6NnGNEw1cDkoVc0x3Vr72/ekkRzPHN7PnutFs1x3LPXUQz+m/l9SobC4ukhnrYt/eT4CwEduRuo20L2AAAAAElFTkSuQmCC" />
+
+	<g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" fill="#f1f5f9">
+		<g transform="translate(360, 175)">
+			<rect width="200" height="34" rx="17" ry="17" fill="none" stroke="#3b82f6" stroke-width="2" />
+			<text x="100" y="23" font-size="15" font-weight="600" fill="#3b82f6" text-anchor="middle" letter-spacing="1.5">FREE &amp; OPEN SOURCE</text>
+		</g>
+
+		<text x="360" y="290" font-size="96" font-weight="800" letter-spacing="-2">SetForge</text>
+
+		<text x="360" y="368" font-size="40" font-weight="700" fill="#f1f5f9">Count Every Rep.</text>
+		<text x="360" y="416" font-size="40" font-weight="700" fill="#3b82f6">Own Your Progress.</text>
+
+		<text x="360" y="478" font-size="22" font-weight="500" fill="#94a3b8">Privacy-first gym rep counter for Windows &amp; Android</text>
+	</g>
+
+	<g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" fill="#94a3b8" font-size="20" font-weight="500">
+		<text x="110" y="572">setforge.fitness</text>
+		<g transform="translate(700, 558)" font-size="18">
+			<circle cx="8" cy="-6" r="4" fill="#22c55e" />
+			<text x="22" y="0">No account</text>
+			<circle cx="148" cy="-6" r="4" fill="#22c55e" />
+			<text x="162" y="0">No cloud</text>
+			<circle cx="270" cy="-6" r="4" fill="#22c55e" />
+			<text x="284" y="0">No tracking</text>
+		</g>
+	</g>
+</svg>
