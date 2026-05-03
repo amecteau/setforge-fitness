@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { SiteConfig } from '$lib/site.config.js';
-	import GitHubIcon from '$lib/shared/icons/GitHubIcon.svelte';
 	import LanguageToggle from '$lib/shared/components/LanguageToggle.svelte';
 
 	let {
@@ -26,12 +25,11 @@
 
 		<!-- Row 2: links -->
 		<div class="flex flex-wrap justify-center gap-6">
-			<a href={links.githubRepo} target="_blank" rel="noopener noreferrer" class="footer-link">
-				<GitHubIcon class="h-4 w-4" />
-				{footer.githubLabel}
+			<a href={links.privacyPolicy} class="footer-link">
+				{footer.privacyPolicyLabel}
 			</a>
-			<a href={links.githubIssues} target="_blank" rel="noopener noreferrer" class="footer-link">
-				{footer.issuesLabel}
+			<a href={links.supportEmail} class="footer-link">
+				{footer.supportLabel}
 			</a>
 		</div>
 

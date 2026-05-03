@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { SiteConfig } from '$lib/site.config.js';
 	import Button from '$lib/shared/components/Button.svelte';
-	import GitHubIcon from '$lib/shared/icons/GitHubIcon.svelte';
 	import WindowsIcon from '$lib/shared/icons/WindowsIcon.svelte';
 	import AndroidIcon from '$lib/shared/icons/AndroidIcon.svelte';
 	import AppleIcon from '$lib/shared/icons/AppleIcon.svelte';
@@ -9,12 +8,10 @@
 
 	let {
 		download,
-		downloads,
-		links
+		downloads
 	}: {
 		download: SiteConfig['download'];
 		downloads: SiteConfig['downloads'];
-		links: SiteConfig['links'];
 	} = $props();
 
 	const platformIcon: Record<string, Component<{ class?: string }>> = {
@@ -65,24 +62,11 @@
 				</div>
 			{/each}
 		</div>
-
-		<div class="text-center">
-			<p class="mb-3 text-sm text-slate-400">{download.sourceNote}</p>
-			<a
-				href={links.githubRepo}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="inline-flex items-center gap-2 text-sm text-slate-300 transition-colors duration-200 hover:text-slate-100 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none"
-			>
-				<GitHubIcon class="h-4 w-4" />
-				{download.githubCta}
-			</a>
-		</div>
 	</div>
 </section>
 
 <style>
- /* stylelint-disable-next-line at-rule-no-unknown */
+	/* stylelint-disable-next-line at-rule-no-unknown */
 	@reference "tailwindcss";
 
 	.section {
@@ -106,5 +90,5 @@
 	.coming-soon-btn {
 		@apply w-full rounded-lg border border-slate-600 py-3 text-center text-sm font-medium text-slate-500;
 	}
-/* ... */
+	/* ... */
 </style>

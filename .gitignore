@@ -26,3 +26,6 @@ test-results
 
 # Paraglide generated output
 src/lib/paraglide
+
+# OG image source (PNG is the deployed artifact)
+static/og-image.svg

@@ -15,13 +15,8 @@
 	});
 </script>
 
-<main>
-	<Hero
-		hero={config.hero}
-		downloads={config.downloads}
-		links={config.links}
-		iconSrc={config.iconSrc}
-	/>
+<main id="main">
+	<Hero hero={config.hero} downloads={config.downloads} iconSrc={config.iconSrc} />
 
 	<div use:reveal>
 		<FeaturesSection features={config.features} />
@@ -32,11 +27,7 @@
 	</div>
 
 	<div use:reveal>
-		<Download
-			download={config.download}
-			downloads={config.downloads}
-			links={config.links}
-		/>
+		<Download download={config.download} downloads={config.downloads} />
 	</div>
 
 	<div use:reveal>

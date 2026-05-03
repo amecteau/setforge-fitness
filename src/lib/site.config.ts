@@ -18,19 +18,19 @@ export function getSiteConfig() {
 		},
 
 		links: {
-			githubRepo: 'https://github.com/amecteau/setforge-app',
-			githubIssues: 'https://github.com/amecteau/setforge-app/issues'
+			privacyPolicy: `${base}/privacy-policy`,
+			supportEmail: 'mailto:setforgefitness@gmail.com'
 		},
 
 		downloads: {
 			windows: {
-				url: 'https://github.com/amecteau/setforge-app/releases/latest',
+				url: '#',
 				label: m.download_windows_label(),
 				sublabel: m.download_windows_sublabel(),
 				comingSoon: false
 			},
 			android: {
-				url: 'https://github.com/amecteau/setforge-app/releases/latest',
+				url: '#',
 				label: m.download_android_label(),
 				sublabel: m.download_android_sublabel(),
 				comingSoon: false
@@ -48,8 +48,7 @@ export function getSiteConfig() {
 			subheadline: m.hero_subheadline(),
 			badge: m.hero_badge(),
 			ctaPrimary: m.hero_cta_primary(),
-			ctaSecondary: m.hero_cta_secondary(),
-			ctaTertiary: m.hero_cta_tertiary()
+			ctaSecondary: m.hero_cta_secondary()
 		},
 
 		features: {
@@ -132,9 +131,7 @@ export function getSiteConfig() {
 			subheadline: m.download_subheadline(),
 			comingSoonLabel: m.download_coming_soon_label(),
 			playStoreNote: m.download_play_store_note(),
-			appleNote: m.download_apple_note(),
-			sourceNote: m.download_source_note(),
-			githubCta: m.download_github_cta()
+			appleNote: m.download_apple_note()
 		},
 
 		privacy: {
@@ -154,10 +151,10 @@ export function getSiteConfig() {
 					description: m.privacy_no_analytics_description()
 				},
 				{
-					id: 'open-source',
-					icon: 'code',
-					title: m.privacy_open_source_title(),
-					description: m.privacy_open_source_description()
+					id: 'works-offline',
+					icon: 'device',
+					title: m.privacy_works_offline_title(),
+					description: m.privacy_works_offline_description()
 				}
 			]
 		},
@@ -165,8 +162,8 @@ export function getSiteConfig() {
 		footer: {
 			copyright: m.footer_copyright(),
 			builtWith: m.footer_built_with(),
-			githubLabel: m.footer_github_label(),
-			issuesLabel: m.footer_issues_label()
+			privacyPolicyLabel: m.footer_privacy_policy_label(),
+			supportLabel: m.footer_support_label()
 		}
 	};
 }

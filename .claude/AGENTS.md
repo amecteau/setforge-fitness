@@ -29,6 +29,8 @@ A professional, app-store-quality promotional website for SetForge — a desktop
 
 When updating `docs/project-status.md`, change the task status emoji (⬜→🔄→✅), add notes, and update the Steering Log if any harness files were changed.
 
+**Before executing any approved plan**, add the new phase and task table to `docs/project-status.md` first — before writing any code. This keeps the tracker accurate even if a session is interrupted mid-implementation.
+
 ### Skills Available
 
 | Skill                      | When to Use                                                                 |

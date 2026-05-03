@@ -4,7 +4,7 @@
 	let { children } = $props();
 </script>
 
-<a href="#hero" class="skip-link">Skip to content</a>
+<a href="#main" class="skip-link">Skip to content</a>
 
 {@render children()}
 

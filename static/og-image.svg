@@ -27,8 +27,8 @@
 
 	<g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" fill="#f1f5f9">
 		<g transform="translate(360, 175)">
-			<rect width="200" height="34" rx="17" ry="17" fill="none" stroke="#3b82f6" stroke-width="2" />
-			<text x="100" y="23" font-size="15" font-weight="600" fill="#3b82f6" text-anchor="middle" letter-spacing="1.5">FREE &amp; OPEN SOURCE</text>
+			<rect width="180" height="34" rx="17" ry="17" fill="none" stroke="#3b82f6" stroke-width="2" />
+			<text x="90" y="23" font-size="15" font-weight="600" fill="#3b82f6" text-anchor="middle" letter-spacing="1.5">COMING SOON</text>
 		</g>
 
 		<text x="360" y="290" font-size="96" font-weight="800" letter-spacing="-2">SetForge</text>

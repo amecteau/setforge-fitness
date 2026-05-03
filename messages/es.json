@@ -1,18 +1,17 @@
 {
 	"tagline": "Cuenta Cada Rep. Domina Tu Progreso.",
-	"description": "Registra tus repeticiones y series en cada entrenamiento. SetForge almacena todo localmente — sin cuenta, sin nube, sin anuncios. Gratis para Windows y Android.",
+	"description": "Registra tus repeticiones y series en cada entrenamiento. SetForge almacena todo localmente — sin cuenta, sin nube, sin anuncios. Disponible para Windows y Android.",
 	"long_description": "SetForge está hecho para el gimnasio, no para un panel de control. Toca para contar cada rep, registra el peso, guarda la serie. Tu historial completo de entrenamientos vive en tu dispositivo, buscable y privado. Sin suscripción, sin cuenta requerida, sin datos enviados a ningún lugar.",
 
 	"meta_title": "SetForge — Contador de Repeticiones Privado",
 	"meta_og_title": "SetForge — Cuenta Cada Rep. Domina Tu Progreso.",
 	"meta_og_description": "Un contador de repeticiones privado para Windows y Android. Tus datos de entrenamiento se quedan en tu dispositivo.",
 
-	"hero_badge": "Gratis y Código Abierto",
+	"hero_badge": "Próximamente",
 	"hero_headline": "Cuenta Cada Rep.\nDomina Tu Progreso.",
 	"hero_subheadline": "SetForge es un registro de entrenamiento privado creado para tu rutina, no para tus datos.",
 	"hero_cta_primary": "Descargar para Windows",
 	"hero_cta_secondary": "Obtener en Android",
-	"hero_cta_tertiary": "Ver en GitHub",
 
 	"features_headline": "Hecho para el Gimnasio",
 	"features_subheadline": "Todo lo que necesitas para seguir tu progreso. Nada más.",
@@ -41,7 +40,7 @@
 	"screenshot_settings_alt": "Pantalla de configuración de la aplicación SetForge",
 	"screenshot_settings_caption": "Ajusta la configuración — Cambia el idioma, el tamaño de fuente, etc....",
 
-	"download_headline": "Descarga SetForge Gratis",
+	"download_headline": "Descarga SetForge",
 	"download_subheadline": "Disponible ahora para Windows y Android. macOS e iOS próximamente.",
 	"download_coming_soon_label": "Próximamente",
 	"download_windows_label": "Descargar para Windows",
@@ -52,8 +51,6 @@
 	"download_apple_sublabel": "macOS 13+ / iOS 16+",
 	"download_play_store_note": "Listado en Google Play Store próximamente.",
 	"download_apple_note": "Soporte para macOS e iOS próximamente.",
-	"download_source_note": "¿Prefieres compilar desde el código fuente? El código completo está en GitHub.",
-	"download_github_cta": "Ver Código Fuente en GitHub",
 
 	"privacy_headline": "Tus Reps Son Tuyas",
 	"privacy_subheadline": "Sin cuenta. Sin rastreo. Sin nube. SetForge almacena todo localmente en tu dispositivo.",
@@ -61,11 +58,11 @@
 	"privacy_local_storage_description": "Todos los datos de entrenamiento se almacenan en una base de datos SQLite en tu dispositivo. Nada sale.",
 	"privacy_no_analytics_title": "Sin Analíticas",
 	"privacy_no_analytics_description": "Cero telemetría, cero píxeles de rastreo, cero scripts de terceros.",
-	"privacy_open_source_title": "Código Abierto",
-	"privacy_open_source_description": "El código fuente completo es público. Auditarlo, bifurcarlo o contribuir.",
+	"privacy_works_offline_title": "Funciona Sin Conexión",
+	"privacy_works_offline_description": "No se requiere conexión a internet. SetForge funciona completamente en tu dispositivo — sin llamadas a servidores, nunca.",
 
 	"footer_copyright": "© 2026 SetForge. Todos los derechos reservados.",
 	"footer_built_with": "SvelteKit + Tauri",
-	"footer_github_label": "GitHub",
-	"footer_issues_label": "Soporte / Problemas"
+	"footer_privacy_policy_label": "Política de Privacidad",
+	"footer_support_label": "Soporte"
 }

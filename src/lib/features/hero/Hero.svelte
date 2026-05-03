@@ -1,17 +1,14 @@
 <script lang="ts">
 	import Button from '$lib/shared/components/Button.svelte';
-	import GitHubIcon from '$lib/shared/icons/GitHubIcon.svelte';
 	import type { SiteConfig } from '$lib/site.config.js';
 
 	let {
 		hero,
 		downloads,
-		links,
 		iconSrc
 	}: {
 		hero: SiteConfig['hero'];
 		downloads: SiteConfig['downloads'];
-		links: SiteConfig['links'];
 		iconSrc: string;
 	} = $props();
 
@@ -50,17 +47,6 @@
 				{hero.ctaSecondary}
 			</Button>
 		</div>
-
-		<!-- GitHub text link -->
-		<a
-			href={links.githubRepo}
-			target="_blank"
-			rel="noopener noreferrer"
-			class="inline-flex items-center gap-1.5 text-sm text-slate-400 transition-colors duration-200 hover:text-slate-200 focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 focus-visible:outline-none"
-		>
-			<GitHubIcon class="h-4 w-4" />
-			{hero.ctaTertiary} →
-		</a>
 	</div>
 </section>
 
